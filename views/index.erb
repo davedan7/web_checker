@@ -1,5 +1,21 @@
 <html>
-  <head></head>
+  <head>
+    <style>
+      body {
+        <% if message == "Way too high!" %>
+          background: red;
+        <% elsif message == "Way too low!" %>
+          background: red;
+        <% elsif message == "Too High!"%>
+          background: #FF8080;
+        <% elsif message == "Too low!"%>
+          background: #FF8080;
+          <% else %>
+          background: #85C285; 
+        <%end%>
+      }
+    </style>
+  </head>
     <body>
     <% if number == params['guess'].to_i %>
       <p>
